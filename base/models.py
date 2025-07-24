@@ -10,4 +10,11 @@ class User(AbstractUser):
     #profilepic = models.ImageField
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['username']
+
+#class Service(models.Model):
+    #name = models.CharField(max_length=200)
+    #description = 
+
+    # def __str__(self)
+    #     return self.name
