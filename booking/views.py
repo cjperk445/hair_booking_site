@@ -1,8 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 # Create your views here.
 
 
 def booking(request):
-    render (request, "booking.html")
+    return render(request, "booking/booking.html")
