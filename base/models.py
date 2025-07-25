@@ -6,7 +6,7 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser):
     email = models.EmailField(unique=True, null=True)
     bio = models.TextField(null=True, blank=True)
-    # profilepic = 
+    #profilepic = models.ImageField()
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']

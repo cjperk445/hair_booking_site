@@ -1,5 +1,6 @@
 {% extends "base.html" %} {% block title %} HanJo - Profile {{user.username}} {% endblock %}
 {% block content %}
-<h1>{{user.username}}</h1>
+<h1>{{user.first_name}} {{user.last_name}}</h1>
+<!-- <img src="{}" alt="{{user.first_name}} {{user.last_name}}'s avatar" width="500" height="600"> -->
 <p>{{user.bio}}</p>
 {% endblock %}
