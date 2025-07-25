@@ -12,6 +12,6 @@ def stylists(request):
     return render(request, 'stylists.html')
 
 def profile_page(request, pk):
-    user = User.objects.get(id=pk)
+    user = User.objects.get(username=pk)
     context = {'user': user}
-    return render(request, 'profile.html', context)
+    return render(request, 'profile.html', context) 
