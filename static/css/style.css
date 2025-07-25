@@ -15,6 +15,9 @@
 
 /* Apply global styling */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: var(--primary-font);
     /*background-color: var(--primary-color);*/
     color: var(--highlight-color);
@@ -51,14 +54,44 @@ body {
     font-family: var(--secondary-font);
 }
 
+#opsening-times ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; 
+}
+
+#opening-times ul li {
+  display: inline-block; 
+  margin-right: 1em;
+}
+
+/*CSS for buttons and boxes*/
+
+.booking-button {
+    background-color: var(--primary-color);
+    border-color: var(--highlight-color-secondary);
+    color: var(--highlight-color-light);
+}
+
+.nice-box {
+   border: 4px solid var(--secondary-color);
+   border-radius: 15px;
+   background-color: var(--primary-color);
+   box-shadow: 0 4px 10px var(--secondary-color);
+   padding: 20px;
+   margin-right: 15px;
+}
+
+
 /* CSS for the footer and it's contents */
 
 footer {
     background-color: var(--highlight-color);
-    position: fixed;
+    margin-top: auto;
+    /*position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 100%;*/
 }
 
 footer > p {
