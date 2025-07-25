@@ -1,11 +1,11 @@
 
 /*Google fonts import*/
-/* @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Press+Start+2P&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Lugrasimo&display=swap');
 
 /*CSS variables*/
 :root {
-   /* --primary-font: 
-    --secondary-font: ; */
+   --primary-font: "League Spartan", sans-serif; 
+    --secondary-font: "Lugrasimo", cursive; 
     --primary-color: #ECF0F1; 
     --secondary-color: #afb2b3;
     --tertiary-color:#424343;
@@ -13,14 +13,14 @@
     --highlight-color-light:#657381; 
 }
 
-/* Apply global styling 
+/* Apply global styling */
 body {
     font-family: var(--primary-font);
-    background-color: var(--primary-color);
+    /*background-color: var(--primary-color);*/
     color: var(--highlight-color);
     margin: 0;
     padding: 0;
-  } */
+  } 
 
 
 /* CSS for the navbar and it's contents*/
