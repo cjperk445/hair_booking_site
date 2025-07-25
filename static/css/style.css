@@ -47,6 +47,10 @@ body {
     flex-direction: column;
 }
 
+.stylish-text {
+    font-family: var(--secondary-font);
+}
+
 /* CSS for the footer and it's contents */
 
 footer {
