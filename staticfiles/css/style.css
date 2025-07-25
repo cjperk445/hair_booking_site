@@ -1,0 +1,99 @@
+
+/*Google fonts import*/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Lugrasimo&display=swap');
+
+/*CSS variables*/
+:root {
+   --primary-font: "League Spartan", sans-serif; 
+    --secondary-font: "Lugrasimo", cursive; 
+    --primary-color: #ECF0F1; 
+    --secondary-color: #afb2b3;
+    --tertiary-color:#424343;
+    --highlight-color: #2C3E50;
+    --highlight-color-light:#657381; 
+}
+
+/* Apply global styling */
+body {
+    font-family: var(--primary-font);
+    /*background-color: var(--primary-color);*/
+    color: var(--highlight-color);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  } 
+
+
+/* CSS for the navbar and it's contents*/
+.navbar-brand {
+    margin-left: 16%;
+}
+
+.nav-link {
+    text-align: center;
+}
+
+.navbar-toggler {
+    margin-right: 20px; 
+}
+/* CSS for the body and it's contents */
+
+.main {
+    /* Enlarge main element to push footer down learnt this from one of the modules in Code Institute*/
+    flex-grow: 1;
+    margin-top: 47px;
+    /* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
+}
+
+/* CSS for the footer and it's contents */
+
+footer {
+    background-color: var(--highlight-color);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer > p {
+    color: var(--secondary-color);
+}
+
+p > a > .fab {
+    font-size: 65px;
+}
+
+/* Media Query at the end to add any extra rules outisde the borrowed schema rules */
+
+/* Media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+    
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+
+p > a > .fab {
+    font-size: 45px;
+}
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+/*Navbar CSS*/
+.navbar-collapse {
+    margin-left: 20%;
+}   
+.nav-link {
+    margin : 0px 20px;
+    font-size: 1.5em;
+}
+
+.navbar-brand {
+    font-size: 1.9em;
+}
+}
+
