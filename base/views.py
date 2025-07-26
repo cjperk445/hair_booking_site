@@ -10,10 +10,6 @@ def index(request):
     return render(request, 'index.html',)
 
 
-def stylists(request):
-    return render(request, 'stylists.html')
-
-
 def profile_page(request, pk):
     user = User.objects.get(username=pk)
     context = {'user': user}

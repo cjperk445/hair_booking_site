@@ -48,22 +48,26 @@ body {
     /* Enable flex properties for child elements */
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
+#photo-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.main-photo {
+    border-radius: 50%;
+}
+.name-tag {
+    margin-top: 20px;
+}
 .stylish-text {
     font-family: var(--secondary-font);
 }
 
-#opsening-times ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none; 
-}
-
-#opening-times ul li {
-  display: inline-block; 
-  margin-right: 1em;
-}
 
 /*CSS for buttons and boxes*/
 
@@ -80,6 +84,8 @@ body {
    box-shadow: 0 4px 10px var(--secondary-color);
    padding: 20px;
    margin-right: 15px;
+   max-width: 100px;
+   /*font-size: 10px;*/
 }
 
 
@@ -101,6 +107,21 @@ footer > p {
 p > a > .fab {
     font-size: 65px;
 }
+
+#opening-times-boxes {
+    flex-flow: row wrap;
+}
+
+#opening-times ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex: nowrap;
+  justify-content: space-evenly;
+
+}
+
 
 /* Media Query at the end to add any extra rules outisde the borrowed schema rules */
 
@@ -129,6 +150,11 @@ p > a > .fab {
 
 .navbar-brand {
     font-size: 1.9em;
+}
+
+.nice-box {
+    min-width: 224px;
+    font-size: 1rem;
 }
 }
 

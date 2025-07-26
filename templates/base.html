@@ -23,16 +23,10 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Hanjo Hair Studio</a>
+      <a class="navbar-brand" href="/">Hanjo Hair Studio</a>
       <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+        class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -45,13 +39,12 @@
           </li>
           <li class="nav-item">
             <a
-              class="nav-link {% if request.path == about_url %}active{%endif%}"
-              href="/stylists"
+              class="nav-link" href="#stylists"
               >Stylists</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link end" href="/booking">Book Now!</a>
@@ -90,9 +83,18 @@
     <div class="main container">{% block content %} {% endblock %}</div>
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
-      <p class="m-0 text-center">
-        {% block copyright %} Copyright CJ Perkins {% now "Y" %} {% endblock copyright %}
-      </p>
+        <div id="opening-times">
+  <h3 class="stylish-text">OPENING TIMES:</h3>
+  <ul id="opening-times-boxes">
+    <li class="nice-box">Tues: 09.00am - 2:30pm</li>
+    <li class="nice-box">Weds: 09.00am - 7.00pm</li>
+    <li class="nice-box">Thurs: 09.00am - 7.00pm</li>
+    <li class="nice-box">Fri: 09.00am - 6.00pm</li>
+    <li class="nice-box">Sat: 09.00am - 5.00pm</li>
+    <br />
+    <li class="nice-box">Sunday & Monday: Closed</li>
+  </ul>
+  </div>
       <br />
       <p class="m-0 text-center">
         <!--Social media links -->
@@ -110,6 +112,11 @@
           rel="noopener"
           ><i class="fab fa-facebook-square ms-3"></i
         ></a>
+      </p>
+   
+  <br>
+   <p class="m-0 text-center">
+        {% block copyright %} Copyright CJ Perkins {% now "Y" %} {% endblock copyright %}
       </p>
     </footer>
 

@@ -1,7 +1,10 @@
-{% extends "base.html" %} {% block title %} HanJo - Home Page {% endblock %} 
+{% extends "base.html" %} {% block title %} HanJo - Home Page {% endblock %}
 {%block content %}
 
-<h1>| HanJo Hair Studio |<br>Here to make your hair as beautiful as you feel</h1>
+<section id="home">
+<h1>
+  | HanJo Hair Studio |<br />Here to make your hair as beautiful as you feel
+</h1>
 <h5 class="stylish-text">
   Fifteen years of business has taught us a thing or two
 </h5>
@@ -11,17 +14,44 @@
   million dollars
 </p>
 
-<div id="opening-times">
-<h3>OPENING TIMES:</h3>
-<ul>
-  <li class="nice-box">Tues: 09.00am - 2:30pm</li>
-  <li class="nice-box">Weds: 09.00am - 7.00pm</li>
-  <li class="nice-box">Thurs: 09.00am - 7.00pm</li>
-  <li class="nice-box">Fri: 09.00am - 6.00pm</li>
-  <li class="nice-box">Sat: 09.00am - 5.00pm</li>
-  <br>
-  <li class="nice-box">Sunday & Monday: Closed</li>
-</ul>
-</div>
+
+</section>
+<section id="about-us">
+
+
+</section>
+<section id="stylists">
+
+  <h2 class="stylish-text">Our Amazing Team</h2>
+  <div id="photo-gallery">
+    <div>
+      <img class="main-photo" src="/static/images/defaultavatar.png" alt="Han Jo our owner"  width="250" height="240">
+      <p class="stylish-text name-tag">Our Supreme Leader Han Jo</p>
+    </div>
+    <div>
+      <img class="main-photo" src="/static/images/jemima-plomp.webp" alt="Jemima Plomp, a stylist"   width="250" height="240">
+      <p class="stylish-text name-tag">Jemima Plomp - Head Stylist</p>
+    </div>
+    <div>
+      <img class="main-photo" src="/static/images/mercutio_brick.webp" alt="Mercution Brick an expert barber"   width="250" height="240">
+      <p class="stylish-text name-tag">Mercutio Brick - Master Barber</p>
+    </div>
+    <div>
+      <img class="main-photo" src="/static/images/sandra_jonkins.webp" alt="Sandra Jonkins a graduate stylist"  width="250" height="240" >
+      <p class="stylish-text name-tag">Sandra Jonkins - Graduate Stylist</p>
+    </div>
+  </div>
+
+</section> 
+<section id="contact">
+  <div>
+    <h2 class="stylish-text">Contact Us</h2>
+    <p>You can email us directly or call us on this number - or if you want book an appointment please click below</p>
+    <button class="btn btn-dark" type="button">Book Now!</button>
+
+  </div>
+
+</section>
+
 
 {% endblock %}
