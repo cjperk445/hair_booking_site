@@ -11,7 +11,7 @@ def index(request):
 
 
 def profile_page(request, pk):
-    user = User.objects.get(username=pk)
+    user = User.objects.get(username__iexact=pk)
     context = {'user': user}
     return render(request, 'profile.html', context)
 
