@@ -156,9 +156,11 @@ p > a > .fab {
 /*Misc CSS for things like buttons, boxes and forms*/
 
 .booking-button {
-    background-color: var(--primary-color);
+    background-color: var(--highlight-color);
     border-color: var(--highlight-color-secondary);
-    color: var(--highlight-color-light);
+    color: var(--primary-color);
+    font-size: 40px;
+    width: 244px;
 }
 
 .nice-box {
@@ -224,6 +226,10 @@ p > a > .fab {
 }
 }
 
+.blurb-box {
+    font-size: 1.2rem;
+}
+
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
 
@@ -243,6 +249,10 @@ p > a > .fab {
     font-size: 1rem;
 }
 
+.blurb-box {
+    font-size: 1.8rem;
+}
+
 
 .wrapper {
   width: 100%;
@@ -251,6 +261,11 @@ p > a > .fab {
   justify-content: center;
   align-items: center;
 
+}
+
+.name-tag {
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 }
 
