@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import User
+from .models import User, Service 
 from datetime import datetime
 
 # Create your views here.
