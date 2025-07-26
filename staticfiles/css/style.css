@@ -15,6 +15,9 @@
 
 /* Apply global styling */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: var(--primary-font);
     /*background-color: var(--primary-color);*/
     color: var(--highlight-color);
@@ -23,8 +26,16 @@ body {
     text-align: center;
   } 
 
+li {
+    list-style-type: none;
+}
 
 /* CSS for the navbar and it's contents*/
+.navbar {
+   box-shadow: 0 4px 10px var(--secondary-color);
+    
+}
+
 .navbar-brand {
     margin-left: 16%;
 }
@@ -45,25 +56,111 @@ body {
     /* Enable flex properties for child elements */
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
+
+#our-story {
+    /* display: flex;
+    flex-flow: column wrap; */
+    
+
+}
+
+.wrapper {
+  width: 320px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: fill;
+
+}
+.refurb {
+    
+
+}
+
+.story {
+
+}
+#photo-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.main-photo {
+    border-radius: 50%;
+}
+.name-tag {
+    margin-top: 20px;
+}
+.stylish-text {
+    font-family: var(--secondary-font);
+}
+
 
 /* CSS for the footer and it's contents */
 
 footer {
     background-color: var(--highlight-color);
-    position: fixed;
+    margin-top: auto;
+    /*position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 100%;*/
 }
 
 footer > p {
     color: var(--secondary-color);
 }
 
+footer h3 {
+    color: var(--primary-color);
+}
+
 p > a > .fab {
     font-size: 65px;
 }
+
+#opening-times-boxes {
+    flex-flow: row wrap;
+}
+
+#opening-times ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex: nowrap;
+  justify-content: space-evenly;
+
+}
+
+/*Misc CSS for things like buttons, boxes and forms*/
+
+.booking-button {
+    background-color: var(--primary-color);
+    border-color: var(--highlight-color-secondary);
+    color: var(--highlight-color-light);
+}
+
+.nice-box {
+   border: 4px solid var(--secondary-color);
+   border-radius: 15px;
+   background-color: var(--primary-color);
+   box-shadow: 0 4px 10px var(--secondary-color);
+   padding: 20px;
+   margin-right: 15px;
+   max-width: 100px;
+   /*font-size: 10px;*/
+}
+
+.forms {
+    
+}
+
 
 /* Media Query at the end to add any extra rules outisde the borrowed schema rules */
 
@@ -84,9 +181,7 @@ p > a > .fab {
 @media screen and (min-width: 992px) {
 
 /*Navbar CSS*/
-.navbar-collapse {
-    margin-left: 20%;
-}   
+  
 .nav-link {
     margin : 0px 20px;
     font-size: 1.5em;
@@ -94,6 +189,21 @@ p > a > .fab {
 
 .navbar-brand {
     font-size: 1.9em;
+}
+
+.nice-box {
+    min-width: 224px;
+    font-size: 1rem;
+}
+
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 }
 
