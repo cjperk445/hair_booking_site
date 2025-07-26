@@ -7,14 +7,7 @@ from datetime import datetime
 
 def index(request):
 
-    # Current year for copyright
-    # today = datetime.now()
-    # this_year = today.year
-
-    return render(request, 'index.html', {
-        # "year": year,
-        # "this_year": this_year,
-    })
+    return render(request, 'index.html',)
 
 
 def stylists(request):
