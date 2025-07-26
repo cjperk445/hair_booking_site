@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views import generic
 from .models import User
 from datetime import datetime
 
@@ -6,7 +7,6 @@ from datetime import datetime
 
 
 def index(request):
-
     return render(request, 'index.html',)
 
 
@@ -18,3 +18,7 @@ def profile_page(request, pk):
     user = User.objects.get(username=pk)
     context = {'user': user}
     return render(request, 'profile.html', context)
+
+
+class UserList(generic.ListView):
+    model = User

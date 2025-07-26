@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block title %} HanJo - All Users {% endblock %}
+{% block content %}
+ 
+
+<body>
+    <h1>User list</h1>
+    {% for user in object_list %}
+    <h2>{{user.first_name}}{{user.last_name}}</h2>
+    <p>{{user.bio}}</p>
+    {% endfor %}
+</body>
+
+{% endblock %}
