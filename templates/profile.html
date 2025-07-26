@@ -1,6 +1,12 @@
 {% extends "base.html" %} {% block title %} HanJo - Profile {{user.username}} {% endblock %}
 {% block content %}
 <h1>{{user.first_name}} {{user.last_name}}</h1>
-<!-- <img src="{/static/images/sandra_jonkins.webp}" alt="{{user.first_name}} {{user.last_name}}'s avatar" width="500" height="600"> -->
+
 <p>{{user.bio}}</p>
+<!-- Easy way to see what services this stylist offers -->
+ <div class="container align-self-center services-box">
+{% for service in user.services.all|dictsort:"name" %}
+    <li class="services">{{ service.name }} | £{{ service.price }}</li>
+{% endfor %}
+</div>
 {% endblock %}
