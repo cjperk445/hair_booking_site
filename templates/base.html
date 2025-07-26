@@ -23,7 +23,7 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">Hanjo Hair Studio</a>
+      <a class="navbar-brand" href="{%%  url 'index'}">HanJo Hair Studio</a>
       <button
         class="navbar-toggler" type="button" data-toggle="collapse" 
         data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,16 +35,16 @@
             <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="{% url 'index' %}#about-us">About Us</a>
           </li>
           <li class="nav-item">
             <a
-              class="nav-link" href="#stylists"
-              >Stylists</a
+              class="nav-link" href="{% url 'index' %}#stylists">
+              Stylists</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" href="{% url 'index' %}#contact">Contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link end" href="/booking">Book Now!</a>
@@ -83,39 +83,31 @@
     <div class="main container">{% block content %} {% endblock %}</div>
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
-        <div id="opening-times">
-  <h3 class="stylish-text">OPENING TIMES:</h3>
-  <ul id="opening-times-boxes">
-    <li class="nice-box">Tues: 09.00am - 2:30pm</li>
-    <li class="nice-box">Weds: 09.00am - 7.00pm</li>
-    <li class="nice-box">Thurs: 09.00am - 7.00pm</li>
-    <li class="nice-box">Fri: 09.00am - 6.00pm</li>
-    <li class="nice-box">Sat: 09.00am - 5.00pm</li>
-    <br />
-    <li class="nice-box">Sunday & Monday: Closed</li>
-  </ul>
-  </div>
-      <br />
+      <div id="opening-times">
+        <h3 class="stylish-text">OPENING TIMES:</h3>
+          <ul id="opening-times-boxes">
+            <li class="nice-box">Tues: 09.00am - 2:30pm</li>
+            <li class="nice-box">Weds: 09.00am - 7.00pm</li>
+            <li class="nice-box">Thurs: 09.00am - 7.00pm</li>
+            <li class="nice-box">Fri: 09.00am - 6.00pm</li>
+            <li class="nice-box">Sat: 09.00am - 5.00pm</li>
+            <br>
+            <li class="nice-box">Sunday & Monday: Closed</li>
+          </ul>
+      </div>
+      <br>
       <p class="m-0 text-center">
         <!--Social media links -->
         <a
-          href="https://www.instagram.com"
-          target="_blank"
-          aria-label="Visit our Instagram page (opens in a new tab)"
-          rel="noopener"
-          ><i class="fab fa-instagram-square ms-3"></i
-        ></a>
-        <a
-          href="https://www.facebook.com"
-          target="_blank"
-          aria-label="Visit our Facebook page (opens in a new tab)"
-          rel="noopener"
-          ><i class="fab fa-facebook-square ms-3"></i
-        ></a>
+          href="https://www.instagram.com" target="_blank" aria-label="Visit our Instagram page (opens in a new tab)"
+          rel="noopener"><i class="fab fa-instagram-square ms-3"></i></a>
+        
+        <a href="https://www.facebook.com" target="_blank" aria-label="Visit our Facebook page (opens in a new tab)"
+          rel="noopener"><i class="fab fa-facebook-square ms-3"></i></a>
       </p>
    
-  <br>
-   <p class="m-0 text-center">
+      <br>
+      <p class="m-0 text-center">
         {% block copyright %} Copyright CJ Perkins {% now "Y" %} {% endblock copyright %}
       </p>
     </footer>
