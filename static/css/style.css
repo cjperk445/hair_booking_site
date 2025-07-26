@@ -182,6 +182,15 @@ p > a > .fab {
    
 }
 
+.contact-box {
+    order: 4px solid var(--secondary-color);
+   border-radius: 15px;
+   background-color: var(--primary-color);
+   box-shadow: 0 4px 10px var(--secondary-color);
+   padding: 20px;
+   margin-right: 15px;
+}
+
 .forms {
     
 }
