@@ -214,8 +214,17 @@ form {
 
 .form-control {
     text-align: center;
-    /* width: 75%; */
 }
+
+.profile-booking {
+    padding-top: 20px;
+}
+
+.profile-booking .booking-button {
+   font-size: 30px;
+   width: auto;
+}
+
 
 
 /* Media Query at the end to add any extra rules outisde the borrowed schema rules */

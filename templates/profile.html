@@ -3,10 +3,24 @@
 <h1>{{user.first_name}} {{user.last_name}}</h1>
 
 <p>{{user.bio}}</p>
-<!-- Easy way to see what services this stylist offers -->
- <div class="container align-self-center services-box">
-{% for service in user.services.all|dictsort:"name" %}
-    <li class="services">{{ service.name }} | £{{ service.price }}</li>
-{% endfor %}
-</div>
+
+{% if user.is_staff %}
+<!-- This only will appear for staff members -->
+    <!-- 
+        This is an easy way to see what services this stylist offers 
+        it will automatically update if services get added or removed
+        without the user having to manualyh update
+    -->
+    <div class="container align-self-center services-box">
+    {% for service in user.services.all|dictsort:"name" %}
+        <li class="services">{{ service.name }} | £{{ service.price }}</li>
+        {% endfor %}
+    </div>
+
+    <div class="profile-booking">
+    <!-- Button auto personalises for each stylist -->
+        <a class="btn btn-dark booking-button" type="button" href="{% url 'booking' %}">Book a service from {{user.first_name}} now!</a>
+    </div>
+
+{% endif %}
 {% endblock %}
