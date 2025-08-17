@@ -206,8 +206,15 @@ p > a > .fab {
     padding: 10px 0;
 }
 
-.forms {
-    
+form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.form-control {
+    text-align: center;
+    /* width: 75%; */
 }
 
 
