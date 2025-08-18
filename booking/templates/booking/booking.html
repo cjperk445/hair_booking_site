@@ -8,7 +8,7 @@
 
 <form class="BookingForm" id="booking_form" method="post" action="{% url 'booking_success' %}">
     {% csrf_token %}
-    <!-- {{ form | crispy}} -->
+    {{ form | crispy}}
     {{ form.as_p}}
 
     <button class="btn btn-dark" type="submit">{% trans "Request Appointment" %} </button>

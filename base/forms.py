@@ -30,5 +30,3 @@ class BookingForm(forms.ModelForm):
         self.fields['stylist'].queryset = User.objects.filter(is_staff=True)
         # the below should only show what the stylist offers
         self.fields['service'].queryset = Service.objects.all()
-    
-    
