@@ -5,7 +5,7 @@
 
 {% block content%} 
 <p>This is my Booking App</p>
-
+{% if user.is_authenticated %}
 <form class="BookingForm" id="booking_form" method="POST" action="{% url 'booking' %}">
     
     {{ form | crispy}}
@@ -13,6 +13,9 @@
    
 
     <button class="btn btn-dark" type="submit">{% trans "Request Appointment" %} </button>
-
 </form>
+{% else %}
+<p>You must log in to book a service</p>
+ <a class="btn btn-dark" href="{% url 'account_login' %}">{% trans "Request Appointment" %} </a>
+ {% endif %}
 {% endblock %}

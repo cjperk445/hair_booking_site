@@ -46,6 +46,7 @@ class Booking(models.Model):
     stylist = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name="customer_bookings")
     date = models.DateField()
     time = models.TimeField()
+    is_approved = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"{self.customer.first_name}''{self.customer.last_name} booking with {self.stylist.first_name}''{self.stylist.last_name}"
+        return f"{self.customer.first_name} {self.customer.last_name} booking with {self.stylist.first_name} {self.stylist.last_name}"
