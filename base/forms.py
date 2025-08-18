@@ -15,7 +15,14 @@ class CustomSignupForm(SignupForm):
         self.fields["email"].label = gettext("Email")
 
 class BookingForm(forms.ModelForm):
+    '''
+    This Meta class constructs booking form from the model
+    '''
     class Meta:
+        '''
+        This add form inputs from items within the model
+        they should appear as form fields
+        '''
         model = Booking
         fields = ['service', 'stylist', 'date', 'time']
     

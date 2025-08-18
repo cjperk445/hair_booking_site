@@ -6,10 +6,11 @@
 {% block content%} 
 <p>This is my Booking App</p>
 
-<form class="BookingForm" id="booking_form" method="post" action="{% url 'booking_success' %}">
-    {% csrf_token %}
+<form class="BookingForm" id="booking_form" method="POST" action="{% url 'booking' %}">
+    
     {{ form | crispy}}
-    {{ form.as_p}}
+    {% csrf_token %}
+   
 
     <button class="btn btn-dark" type="submit">{% trans "Request Appointment" %} </button>
 
