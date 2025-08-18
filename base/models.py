@@ -6,6 +6,8 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser):
     email = models.EmailField(unique=True)
     bio = models.TextField(null=True, blank=True)
+    first_name = models.CharField(max_length=100, null=True, blank=True)
+    last_name = models.CharField(max_length=100, null=True, blank=True)
     
     # profilepic = models.ImageField()
 
@@ -29,11 +31,21 @@ class Service(models.Model):
     # multiple stylists can offer the same thing
     stylist = models.ManyToManyField(
         User, related_name='services')
-    
-    
+
     class Meta:
         verbose_name = "Service"
         verbose_name_plural = "Services"
 
     def __str__(self):
         return f"{self.name} - £{self.price}"
+
+
+class Booking(models.Model):
+    customer = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings')
+    service = models.ForeignKey(Service, on_delete=models.SET_NULL, null=True)
+    stylist = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name="customer_bookings")
+    date = models.DateField()
+    time = models.TimeField()
+
+    def __str__(self):
+        return f"{self.customer.first_name}''{self.customer.last_name} booking with {self.stylist.first_name}''{self.stylist.last_name}"

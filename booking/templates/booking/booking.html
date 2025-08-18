@@ -1,4 +1,17 @@
 {% extends "base.html" %} {% block title %} HanJo | Booking {% endblock %}
+
+{% load i18n %}
+{% load crispy_forms_tags%}
+
 {% block content%} 
 <p>This is my Booking App</p>
+
+<form class="BookingForm" id="booking_form" method="post" action="{% url 'booking_success' %}">
+    {% csrf_token %}
+    <!-- {{ form | crispy}} -->
+    {{ form.as_p}}
+
+    <button class="btn btn-dark" type="submit">{% trans "Request Appointment" %} </button>
+
+</form>
 {% endblock %}
