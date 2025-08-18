@@ -4,18 +4,26 @@
 {% load crispy_forms_tags%}
 
 {% block content%} 
-<p>This is my Booking App</p>
+<h2>Booking Request Form</h2>
+<p class="generalinfo">Please fill in the form below to request an appointment with one of our 
+    stylists We will get back to you as soon as we can. 
+    Please bear in mind that at busy times we reserve the right to cancel appointments.</p>
 {% if user.is_authenticated %}
-<form class="BookingForm" id="booking_form" method="POST" action="{% url 'booking' %}">
-    
-    {{ form | crispy}}
-    {% csrf_token %}
-   
 
-    <button class="btn btn-dark" type="submit">{% trans "Request Appointment" %} </button>
-</form>
-{% else %}
-<p>You must log in to book a service</p>
- <a class="btn btn-dark" href="{% url 'account_login' %}">{% trans "Request Appointment" %} </a>
+    <form class="BookingForm" id="booking_form" method="POST" action="{% url 'booking' %}">
+        
+        {{ form | crispy}}
+        {% csrf_token %}
+    
+        <br>
+        <button class="btn btn-dark general_button" type="submit">{% trans "Request Appointment" %} </button>
+        <br>
+    </form>
+
+    {% else %}
+
+    <p>You must log in to book a service</p>
+    <a class="btn btn-dark general_button" href="{% url 'account_login' %}">{% trans "Login" %} </a>
+
  {% endif %}
 {% endblock %}

@@ -225,12 +225,19 @@ form {
    width: auto;
 }
 
-
-
+/* #home_button {
+    width: 25%;
+    align-self: center;
+} */
 /* Media Query at the end to add any extra rules outisde the borrowed schema rules */
 
 /* Media query: large or landscape phones (576px and up) */
 @media screen and (min-width: 576px) {
+
+    #home_button {
+    width: 80%;
+    align-self: center;
+}
     
 }
 
@@ -244,6 +251,10 @@ p > a > .fab {
 
 .blurb-box {
     font-size: 1.2rem;
+}
+
+ #home_button {
+    width: 50%;
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
@@ -282,6 +293,19 @@ p > a > .fab {
 .name-tag {
     font-weight: bold;
     font-size: 1.2rem;
+}
+
+#home_button {
+    width: 25%;
+    font-size: 1.5rem;
+}
+
+.general_button {
+    font-size: 1.5rem;
+}
+
+.generalinfo {
+    font-size: 1.7rem;
 }
 }
 
